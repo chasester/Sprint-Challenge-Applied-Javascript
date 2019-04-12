@@ -31,14 +31,15 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
-
+Dom is the document or the way to interface with all the html on the page.
 2. What is an event?
-
+An event is anything that happens to the page that can be notified to.
 3. What is an event listener?
-
+An event listener is a way to add a call back on a particlar event. This event can be attached to the dom or to a particular object.
 4. Why would we convert a NodeList into an Array?
-
+A node list is a link list meaning that it doesnt know its length impicity rather it stores the data by pointing each element to the next till the next ptr is null. An array rather knows the memory size of the object and uses this size to find the location of the object by scrolling allong the memory. Link list are better from a Dom pov because you can freely add and remove data quickly without having to move all elements (before or after) the elmement. Therefore by converting to an Array we get a speed boost to our function look ups (Array[index]) and since we arent adding or removing elements dynamically we dont lose any speed. Therefore in java script many of the functionalities are not avalible in linked list that are in Array. So by converting to an array we can speed up the java and have access to more functionality
 5. What is a component?
+A component is any part of a working set of code that is completely stand alone and can be repricated removed or changed without effecting other elements of the code.
 
 ### Git Set up
 

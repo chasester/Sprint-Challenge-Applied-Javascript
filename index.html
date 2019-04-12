@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="./components/Tabs/Tabs.js" async></script>
-  <!-- <script src="./components/Carousel/Carousel.js" async></script> -->
+  <script src="./components/Carousel/Carousel.js" async></script>
 </head>
 
 <body>
@@ -50,19 +50,29 @@
 
   <!-- STRETCH GOAL: ONLY UNCOMMENT THIS WHEN YOU ARE FINISHED WITH THE MAIN OBJECTIVE -->
   <!-- CAROUSEL COMPONENT -->
-  <!-- <div class="carousel">
-    <div class="left-button"><</div>
-    <img src="./assets/carousel/mountains.jpeg" />
+  <div class="carousel">
+    <img src="./assets/carousel/mountains.jpeg" class="active-img" />
     <img src="./assets/carousel/computer.jpeg" />
     <img src="./assets/carousel/trees.jpeg" />
     <img src="./assets/carousel/turntable.jpeg" />
-    <div class="right-button">></div>
-  </div> -->
+    <div class="left-button"><</div>
+    <div class="right-button">></div> <!--moved here so it renders on top of the img-->
+  </div>
 
   <!-- CARDS COMPONENT -->
   <div class="cards-container">
 
     <!-- CARD COMPONENTS -->
+    <div class="card" data-tab="javascript">
+      <div class="headline">Why Javascript is not as good as C++ and will never grow up to be a real language</div>
+      <div class="author">
+        <div class="img-container">
+          <img src="http://is3.mzstatic.com/image/thumb/Purple71/v4/cc/90/b8/cc90b8c1-5b71-5c44-c3d1-49f98b808384/source/512x512bb.jpg" />
+        </div>
+        <span>By Every Good Programer</span>
+      </div>
+    </div>
+
     <div class="card" data-tab="javascript">
       <div class="headline">ES8: The Next Step in the Evolution of Javascript and What it Means For Your Projects</div>
       <div class="author">
@@ -93,6 +103,16 @@
       </div>
     </div>
 
+    <div class="card" data-tab="javascript">
+      <div class="headline">Javascript: A bloated mess or an under optimized language?</div>
+      <div class="author">
+        <div class="img-container">
+          <img src="data:image/jpeg;base64,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y2ycraLv/wBOIWBnctRU0rmRsic6llDeKGNytMrSC1z7DwrXV7RDMqFJu0gMbGtmqWSslE5qWyg1D5A0sBfI8G+h5ACy7aHYLJPFNLW1lQadxfGyplY5gcWluawaDcBx6VeEQzKjVG70CSV9PX1sAnkdM6OnlY2MPfbO5oLCRci/Ne/CNioIqWSllzTxzPfJIakhznuebl1wAAb6gixVqRDKhO3dlt2w4jiEcXIRtqQQ0csrHOaXNHnU5g+ydPTwvhjZZswcJHFxdI8vGVznvOrnWPSrCiGWef6ZlsfBZiWICIM4Yj40eXJa2W2TlZcUG7LgM4dNiFfDGCSI4pow0E87d4tERDKE2VwBtDA2BjnuDS92aUgvcXvL3FxAA5uPQptERBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf//Z" />
+        </div>
+        <span>By The Garbage Man</span>
+      </div>
+    </div>
+
     <div class="card" data-tab="technology">
       <div class="headline">AI: What Are the Ethical Ramifications of the Future?</div>
       <div class="author">
@@ -100,6 +120,16 @@
           <img src="./assets/max.jpg" />
         </div>
         <span>By MAX GOODBOYE</span>
+      </div>
+    </div>
+
+    <div class="card" data-tab="javascript">
+      <div class="headline">Why is Javascript so slow? How to hack Javascipt to run faster.</div>
+      <div class="author">
+        <div class="img-container">
+          <img src="https://lizardandthebearman.files.wordpress.com/2014/05/bad-toast.jpg" />
+        </div>
+        <span>By JIT</span>
       </div>
     </div>
 
@@ -212,7 +242,6 @@
         <span>By MAX GOODBOYE</span>
       </div>
     </div>
-
   </div>
 </body>
 

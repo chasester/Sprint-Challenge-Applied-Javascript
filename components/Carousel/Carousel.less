@@ -17,7 +17,15 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: auto;
+    
     &:hover {
       color: @lambda-times-color-primary;
       background-color: @lambda-times-color-white;
@@ -35,7 +43,25 @@
     transform: translate(0, -50%);
   }
   img {
-    .width-100();
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    opacity: 0;
+    transition: opacity 2s linear;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
   }
+  .active-img
+    {
+      opacity: 1;
+    }
+  
 }
