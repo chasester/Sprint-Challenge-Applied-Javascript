@@ -280,7 +280,12 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: auto;
 }
 .carousel .left-button:hover,
 .carousel .right-button:hover {
@@ -299,6 +304,11 @@ body {
   transform: translate(0, -50%);
 }
 .carousel img {
-  width: 100%;
+  opacity: 0;
   display: none;
+  transition: opacity 2s linear;
+}
+.carousel .active-img {
+  opacity: 1;
+  display: block;
 }

@@ -17,7 +17,14 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    cursor: pointer;
+    //-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: auto;
+
     &:hover {
       color: @lambda-times-color-primary;
       background-color: @lambda-times-color-white;
@@ -35,7 +42,14 @@
     transform: translate(0, -50%);
   }
   img {
-    .width-100();
+    opacity: 0;
     display: none;
+    transition: opacity 2s linear;
   }
+  .active-img
+    {
+      opacity: 1;
+      display: block;
+    }
+  
 }

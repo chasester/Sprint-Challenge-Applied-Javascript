@@ -8,7 +8,6 @@ class TabLink {
     this.tabData = tabElement.dataset.tab;
     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:    
     // Check to see if this.tabData is equal to 'all'
-    console.log(`.card${this.tabData === "all" ?"":`[data-tab='${this.tabData}']`}`);
     this.cards = document.querySelectorAll(`.card${this.tabData === "all" ?"":`[data-tab='${this.tabData}']`}`);
     /*
     if(this.tabData === "all"){
