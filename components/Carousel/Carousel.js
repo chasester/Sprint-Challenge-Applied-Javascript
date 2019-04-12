@@ -4,9 +4,17 @@ class Carousel {
         this.element = element;
         this.images = element.querySelectorAll("img");
         this.curent = 0;
-        console.log("hello")
-        element.querySelector(".right-button").addEventListener("click",() => this.onclick(1));
-        element.querySelector(".left-button").addEventListener("click",()=> this.onclick(-1));
+        this.buttonRight = element.querySelector(".right-button");
+        this.buttonRight.addEventListener("click",() => this.onclick(1));
+        this.buttonLeft = element.querySelector(".left-button");
+        this.buttonLeft.addEventListener("click",()=> this.onclick(-1));
+        this.element.addEventListener("mouseenter", ()=>this.onmousehover(1));
+        this.element.addEventListener("mouseleave", ()=>this.onmousehover(0));
+    }
+    onmousehover(enter)
+    {
+        this.buttonLeft.classList.toggle("active-img")
+        this.buttonRight.classList.toggle("active-img")
     }
 
     onclick(dir)
